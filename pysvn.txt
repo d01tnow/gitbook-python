@@ -1,0 +1,4 @@
+https://downloads.sourceforge.net/project/pysvn/pysvn/V1.9.10/pysvn-1.9.10.tar.gz
+错误：pysvn-1.9.10.tar.gz 中缺少软件包元数据
+错误：'pysvn-1.9.10.tar.gz': 无效或已损坏的软件包
+
