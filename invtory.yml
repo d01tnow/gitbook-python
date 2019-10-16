@@ -1,0 +1,40 @@
+!group
+children:
+  gg1: !group
+    children:
+      g1: !group
+        children: null
+        hosts:
+          alias1_1:
+            ansible_host: 192.168.39.1
+            var1_1: '22'
+          alias1_2:
+            ansible_host: 192.168.39.2
+            var1_2: '"hi, all"'
+        name: g1
+        vars:
+          ansible_ssh_port: '2222'
+      g2: !group
+        children: null
+        hosts:
+          192.168.39.211: &id001
+            ansible_ssh_port: '3333'
+            ansible_user: '"user"'
+            var_g2_1: '2222'
+          192.168.39.221: *id001
+          192.168.39.231: *id001
+          192.168.39.241: *id001
+          192.168.39.251: *id001
+          192.168.39.30:
+            ansible_user: '"user30"'
+            var_g2_2: '3333'
+        name: g2
+        vars:
+          g2_var: '123'
+    hosts: null
+    name: gg1
+    vars: null
+hosts: null
+name: all
+vars:
+  ansible_user: test_user
